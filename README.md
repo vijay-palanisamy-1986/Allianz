@@ -1,29 +1,34 @@
 Welcome !
 
 ## Pre-requistis 
-- If you are running this dbt-project with Apple silicon i.e., Macbook M1 or higher, Run the terminal using Rosetta [More info here](https://support.apple.com/en-us/102527)
 - python3 installation
 - dbt-core installation
 - dbt-snowflake connector: python3 -m pip install dbt-core dbt-snowflake
 - Snowflake database: database created for this assignment connection details in [profile file](3_Design/profiles.yml)
+- Note: If you are running this dbt-project with Apple silicon i.e., Macbook M1 or higher, Run the terminal using Rosetta [More info here](https://support.apple.com/en-us/102527)
 
 
 ## About this project:
 - This is dbt assignment created for Alliaze Interview evaluation purpose.
 - Requirement of this assignment provided by Allianze is in [Allianz_DBT_Assignmnet_medior.doc](1_Requirements/Allianz_DBT_Assignmnet_medior.docx) 
-- [Presentation](3_Design/Presentation.pptx) about this project including Design, enviroment setup, dbt and Snowflake setup etc at 
+- [Presentation](3_Design/Presentation.pptx) contains details about this project Design, Enviroment setup, dbt & Snowflake setup and implementation details etc 
 
 ## Design:
 - [Solution design](3_Design/Solution.drawio)
 - [Data Model design](<3_Design/Data model - DWH.drawio>)
-- Note: There no Dataware house and consumption related requirment. Hence these 2 layers are skipped (Out of scope :))
+- Note: 
+    - There no Dataware house and consumption related requirment. Hence these 2 layers are skipped (Out of scope :))
+    - Above design document can be viewed or opened using https://app.diagrams.net/ or App Diagram applicaiton from your laptop
 
 
-## Development$:
-### RAW data is downloaded from www.kaggle.com
+## Development:
+Developed using 3 layer approach i.e., RAW, stage and Data vault layers
+
+### RAW Layer
 - This RAW layer holds the exact data that is coming from source either in files or in tables
 - Loading Mechanism: Trucate and Load, means will have only last version of the data received
-- Datasets
+- Datasets:
+    - All RAW data is downloaded from www.kaggle.com
     - Customer - https://www.kaggle.com/datasets/shrutimechlearn/customer-data
     - Product - https://www.kaggle.com/datasets/sujaykapadnis/products-datasets
     - Order data - Cooked up by Vijay based on above Customer and Product data
@@ -42,6 +47,7 @@ Welcome !
 
 ### DATAVALUT layer:
 Model the data using DataVault 2.0 model
+- High level design details under [Design](https://github.com/vijay-palanisamy-1986/Allianz/tree/main?tab=readme-ov-file#design) section
 - Loading Mechanism: Incremental with historic changes retention
 - Customer:
     - Built customer satellite table to hold base customer data attributes (with holding historic changes)
