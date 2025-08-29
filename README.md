@@ -11,11 +11,12 @@ Welcome !
 ## About this project:
 - This is dbt assignment created for Alliaze Interview evaluation purpose.
 - Requirement of this assignment provided by Allianze is in [Allianz_DBT_Assignmnet_medior.doc](1_Requirements/Allianz_DBT_Assignmnet_medior.docx) 
-
+- [Presentation](3_Design/Presentation.pptx) about this project including Design, enviroment setup, dbt and Snowflake setup etc at 
 
 ## Design:
-- 3 Layer approached has been choosen (RAW, Stage and Datavault)
-- There no Dataware house and consumption related requirment. Hence these 2 layers are skipped (Out of scope :))
+- [Solution design](3_Design/Solution.drawio)
+- [Data Model design](<3_Design/Data model - DWH.drawio>)
+- Note: There no Dataware house and consumption related requirment. Hence these 2 layers are skipped (Out of scope :))
 
 
 ## Development$:
