@@ -1,0 +1,9 @@
+---
+version: 2
+
+sources:
+  - name: customer
+    database: ALLIANZ
+    schema: SOURCE
+    tables:
+      - name: CRM_CUSTOMER

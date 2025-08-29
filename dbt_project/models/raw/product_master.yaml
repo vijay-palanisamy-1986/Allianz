@@ -1,0 +1,9 @@
+---
+version: 2
+
+sources:
+  - name: product
+    database: ALLIANZ
+    schema: SOURCE
+    tables:
+      - name: PIM_PRODUCTS

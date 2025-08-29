@@ -1,0 +1,9 @@
+---
+version: 2
+
+sources:
+  - name: orders
+    database: ALLIANZ
+    schema: SOURCE
+    tables:
+      - name: SAP_ORDERS

@@ -1,0 +1,52 @@
+---
+version: 0
+
+models:
+  - name: stg_customer_v0
+    description: Customer master - stage data of current run
+    config:
+      contract:
+        enforced: true
+    meta:
+      technical_owner: CRM flows from Sales force application
+
+    columns:
+      - name: customer_id
+        description: Id of the customer 
+        data_type: integer
+
+      - name: gender
+        description: Gender of the customer
+        data_type: string
+
+      - name: age
+        description: Age of the customer
+        data_type: integer
+
+      - name: annual_income_inr
+        description: Annual income of hte customer in India rupees
+        data_type: integer
+
+      - name: spending_score
+        description: Spending score of the customer
+        data_type: integer
+
+      - name: profession
+        description: Profession of the customer
+        data_type: string
+
+      - name: work_experience
+        description: no of years of work work experience
+        data_type: integer
+
+      - name: family_size
+        description: Size of the family i.e., no of people in the family
+        data_type: integer
+
+      - name: source
+        description: Source system of the record
+        data_type: string
+
+      - name: stg_load_ts
+        description: Time stamp, when the record is loaded into DWH Stage layer
+        data_type: timestamp_ntz

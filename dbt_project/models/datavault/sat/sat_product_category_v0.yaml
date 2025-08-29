@@ -1,0 +1,39 @@
+---
+version: 0
+
+models:
+  - name: sat_product_category_v0
+    description: Category satellite table
+    config:
+      contract:
+        enforced: true
+    meta:
+      technical_owner: PIM Team
+
+    columns:
+      - name: product_category_hk
+        description: Hask difference of the record
+        data_type: binary
+        tests:
+          - not_null
+          - unique
+
+      - name: product_hk
+        description: Hask key of the Product Category satellite table
+        data_type: binary
+        tests:
+          - not_null
+
+      - name: DV_LOAD_DATETIME
+        description: Time stamp, when the record is loaded into DWH Stage layer
+        data_type: timestamp_ntz
+
+      - name: DV_RECORD_SOURCE
+        description: Source system of the record
+        data_type: string
+
+      - name: category_name
+        description: Brand name of the product 
+        data_type: string
+        tests:
+          - not_null

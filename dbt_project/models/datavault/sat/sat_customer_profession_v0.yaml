@@ -1,0 +1,53 @@
+---
+version: 0
+
+models:
+  - name: sat_customer_profession_v0
+    description: Customer Profession satellite table
+    config:
+      contract:
+        enforced: true
+    meta:
+      technical_owner: CRM Sales force team
+
+    columns:
+      - name: customer_profession_hk
+        description: Hask difference of the record
+        data_type: binary
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_hk
+        description: Hask key of the satellite customer
+        data_type: binary
+        tests:
+          - not_null
+
+      - name: DV_LOAD_DATETIME
+        description: Time stamp, when the record is loaded into DWH Stage layer
+        data_type: timestamp_ntz
+
+      - name: DV_RECORD_SOURCE
+        description: Source system of the record
+        data_type: string
+
+      - name: profession
+        description: Profession of the customer
+        data_type: string
+
+      - name: risk_category
+        description: Gender of the customer
+        data_type: string
+        
+      - name: annual_income_inr
+        description: Annual income of hte customer in India rupees
+        data_type: integer
+
+      - name: annual_income_bucket
+        description: Spending bucket of the customer
+        data_type: string
+
+      - name: work_experience
+        description: no of years of work work experience
+        data_type: integer

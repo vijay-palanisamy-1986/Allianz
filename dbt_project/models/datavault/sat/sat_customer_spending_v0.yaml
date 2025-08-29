@@ -1,0 +1,41 @@
+---
+version: 0
+
+models:
+  - name: sat_customer_spending_v0
+    description:  Customer spending bucket satellite table
+    config:
+      contract:
+        enforced: true
+    meta:
+      technical_owner: data ware house team as it manual reference table
+
+    columns:
+      - name: customer_spending_hk
+        description: Hask difference of the record
+        data_type: binary
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_hk
+        description: Hask key of the satellite customer
+        data_type: binary
+        tests:
+          - not_null
+
+      - name: DV_LOAD_DATETIME
+        description: Time stamp, when the record is loaded into DWH Stage layer
+        data_type: timestamp_ntz
+
+      - name: DV_RECORD_SOURCE
+        description: Source system of the record
+        data_type: string
+
+      - name: spending_score
+        description: Spending score of the customer
+        data_type: integer
+
+      - name: spending_bucket
+        description: Spending bucket of the customer
+        data_type: string

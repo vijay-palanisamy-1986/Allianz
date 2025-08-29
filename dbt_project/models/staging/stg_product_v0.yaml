@@ -1,0 +1,56 @@
+---
+version: 0
+
+models:
+  - name: stg_product_v0
+    description: product master - stage data of current run
+    config:
+      contract:
+        enforced: true
+    meta:
+      technical_owner: PIM Team
+
+    columns:
+      - name: product_id
+        description: Id of the product 
+        data_type: string
+
+      - name: product_name
+        description: Name of the product 
+        data_type: string
+
+      - name: product_description
+        description: Description of the product
+        data_type: string
+
+      - name: brand_name
+        description: Brand name of the product 
+        data_type: string
+
+      - name: product_sizes
+        description: Size details of the product 
+        data_type: string
+
+      - name: price
+        description: price of the product 
+        data_type: integer
+
+      - name: mrp
+        description: maximium retail price of the product 
+        data_type: integer
+
+      - name: discount_name
+        description: discount details available for the product 
+        data_type: string
+
+      - name: category_name
+        description: product category
+        data_type: string
+
+      - name: source
+        description: Source system of the record
+        data_type: string
+
+      - name: stg_load_ts
+        description: Time stamp, when the record is loaded into DWH Stage layer
+        data_type: timestamp_ntz

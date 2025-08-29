@@ -1,0 +1,48 @@
+---
+version: 0
+
+models:
+  - name: sat_customer_v0
+    description: Customer satellite table
+    config:
+      contract:
+        enforced: true
+    meta:
+      technical_owner: CRM Sales force team
+
+    columns:
+      - name: customer_hk
+        description: Hask key of the satellite customer
+        data_type: binary
+        tests:
+          - not_null
+
+      - name: DV_LOAD_DATETIME
+        description: Time stamp, when the record is loaded into DWH Stage layer
+        data_type: timestamp_ntz
+
+      - name: DV_RECORD_SOURCE
+        description: Source system of the record
+        data_type: string
+
+      - name: DV_HASH_DIFF
+        description: Hask difference of the record
+        data_type: binary
+
+      - name: customer_id
+        description: Id of the customer 
+        data_type: integer
+        tests:
+          - not_null
+
+      - name: gender
+        description: Gender of the customer
+        data_type: string
+
+      - name: age
+        description: Age of the customer
+        data_type: integer
+
+      - name: family_size
+        description: Size of the family i.e., no of people in the family
+        data_type: integer
