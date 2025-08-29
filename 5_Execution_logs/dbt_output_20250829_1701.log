@@ -1,0 +1,32 @@
+[0m15:28:34  Running with dbt=1.10.9
+[0m15:28:35  Registered adapter: snowflake=1.10.0
+[0m15:28:35  Found 15 models, 32 data tests, 3 sources, 479 macros
+[0m15:28:35  
+[0m15:28:35  Concurrency: 10 threads (target='dev')
+[0m15:28:35  
+[0m15:28:40  1 of 10 START sql incremental model datavault.sat_customer_profession_v0 ....... [RUN]
+[0m15:28:40  2 of 10 START sql incremental model datavault.sat_customer_spending_v0 ......... [RUN]
+[0m15:28:40  4 of 10 START sql incremental model datavault.sat_orders_v0 .................... [RUN]
+[0m15:28:40  5 of 10 START sql incremental model datavault.sat_product_category_v0 .......... [RUN]
+[0m15:28:40  6 of 10 START sql incremental model datavault.sat_product_discount_v0 .......... [RUN]
+[0m15:28:40  7 of 10 START sql incremental model datavault.sat_product_v0 ................... [RUN]
+[0m15:28:40  3 of 10 START sql incremental model datavault.sat_customer_v0 .................. [RUN]
+[0m15:28:42  7 of 10 OK created sql incremental model datavault.sat_product_v0 .............. [[32mSUCCESS 4566[0m in 2.27s]
+[0m15:28:42  2 of 10 OK created sql incremental model datavault.sat_customer_spending_v0 .... [[32mSUCCESS 2000[0m in 2.28s]
+[0m15:28:42  5 of 10 OK created sql incremental model datavault.sat_product_category_v0 ..... [[32mSUCCESS 4566[0m in 2.30s]
+[0m15:28:43  4 of 10 OK created sql incremental model datavault.sat_orders_v0 ............... [[32mSUCCESS 5[0m in 2.41s]
+[0m15:28:43  1 of 10 OK created sql incremental model datavault.sat_customer_profession_v0 .. [[32mSUCCESS 2000[0m in 2.48s]
+[0m15:28:43  6 of 10 OK created sql incremental model datavault.sat_product_discount_v0 ..... [[32mSUCCESS 4566[0m in 2.53s]
+[0m15:28:43  8 of 10 START sql incremental model datavault.hub_product_v0 ................... [RUN]
+[0m15:28:43  3 of 10 OK created sql incremental model datavault.sat_customer_v0 ............. [[32mSUCCESS 2000[0m in 2.58s]
+[0m15:28:43  9 of 10 START sql incremental model datavault.hub_customer_v0 .................. [RUN]
+[0m15:28:45  9 of 10 OK created sql incremental model datavault.hub_customer_v0 ............. [[32mSUCCESS 2000[0m in 1.90s]
+[0m15:28:45  8 of 10 OK created sql incremental model datavault.hub_product_v0 .............. [[32mSUCCESS 4566[0m in 2.21s]
+[0m15:28:45  10 of 10 START sql incremental model datavault.lnk_orders_v0 ................... [RUN]
+[0m15:28:48  10 of 10 OK created sql incremental model datavault.lnk_orders_v0 .............. [[32mSUCCESS 5[0m in 3.35s]
+[0m15:28:48  
+[0m15:28:48  Finished running 10 incremental models in 0 hours 0 minutes and 13.60 seconds (13.60s).
+[0m15:28:48  
+[0m15:28:48  [32mCompleted successfully[0m
+[0m15:28:48  
+[0m15:28:48  Done. PASS=10 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=10
