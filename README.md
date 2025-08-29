@@ -5,12 +5,12 @@ Welcome !
 - python3 installation
 - dbt-core installation
 - dbt-snowflake connector: python3 -m pip install dbt-core dbt-snowflake
-- Snowflake database: database created for this assignment connection details in [profile file](../Assignment/profiles.yml)
+- Snowflake database: database created for this assignment connection details in [profile file](3_Design/profiles.yml)
 
 
 ## About this project:
 - This is dbt assignment created for Alliaze Interview evaluation purpose.
-- Requirement of this assignment provided by Allianze is in [Allianz_DBT_Assignmnet_medior.doc](<../Assignment/1 Requirements/Allianz_DBT_Assignmnet_medior.docx>)
+- Requirement of this assignment provided by Allianze is in [Allianz_DBT_Assignmnet_medior.doc](1_Requirements/Allianz_DBT_Assignmnet_medior.docx) 
 
 
 ## Design:
@@ -88,8 +88,8 @@ All the dbt model in this project can be excuted in different ways....
 1. Individual models using command:  `dbt run --select modelName`
 2. Whole project: 
     - Method 1: Using command:  `dbt run`
-    - Method 2: Tags are configured [project.yaml](dbt_project.yml) file, so that whole project can be executed using tag: `dbt run --select tag:allianz_dbt_assignment`
-3. Partially: Tags are configured [project.yaml](dbt_project.yml) file, so that each layer can be executed using tag: `dbt run --select tag:stage` or  `dbt run --select tag:datavault`
+    - Method 2: Tags are configured [project.yaml](4_dbt_project/dbt_project.yml) file, so that whole project can be executed using tag: `dbt run --select tag:allianz_dbt_assignment`
+3. Partially: Tags are configured [project.yaml](4_dbt_project/dbt_project.yml)file, so that each layer can be executed using tag: `dbt run --select tag:stage` or  `dbt run --select tag:datavault`
 4. Care has been take to reference or putting dependiences during model development. Hence you can also execute dbt models flow with prefix or suffix using '+' operator
     - Example 1: `dbt run --select modelName+`
     - Example 2: `dbt run --select +modelName`
