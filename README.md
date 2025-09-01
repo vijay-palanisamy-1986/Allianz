@@ -5,7 +5,7 @@ Welcome !
 - Install dbt-core: `python3 -m pip install dbt-core`
 - Update all dependent dbt package: `dbt deps`
 - Install dbt-snowflake database connector: `python3 -m pip install dbt-core dbt-snowflake`
-- Snowflake database: database created for this assignment. Connection ddetails in [presenation] (3_Design/Presentation.pptx) or [profile file](3_Design/profiles.yml). Its not good practice to share file with password in it, but sharing as this assignment project :)
+- Snowflake database: database created for this assignment. Connection ddetails in [presenation](3_Design/Presentation.pptx) or [profile file](3_Design/profiles.yml). Its not good practice to share file with password in it, but sharing as this assignment project :)
 - Note:
     - You can run these commands in Apple Mac Terminal or Unix or Linux or WSL (Windows Subsytem Linux)
     - Please be aware that the installation procedure is slighty different in other OS
