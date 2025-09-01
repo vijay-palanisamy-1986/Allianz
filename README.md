@@ -18,8 +18,10 @@ Welcome !
 - [Presentation](3_Design/Presentation.pptx) contains details about this project Design, Enviroment setup, dbt & Snowflake setup, Snowflake connection and implementation details etc 
 
 ## Design:
-- ![Solution design](<3_Design/Solution Design.jpg>)
-- ![Data Model design](<3_Design/Data model - DWH.jpg>)
+- Solution Design:
+![Solution design](<3_Design/Solution Design.jpg>)
+- Data Model Design:
+![Data Model design](<3_Design/Data model - DWH.jpg>)
 - Designed with 3 layer approach i.e., RAW, stage and Data vault layers
 - Note: 
     - There are no DWH(Datawarehouse) and consumption related requirements. Hence these 2 layers are skipped for this assignment (Out of scope :))
