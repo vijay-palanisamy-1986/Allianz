@@ -7,7 +7,8 @@ Welcome !
 - Install dbt-snowflake database connector: `python3 -m pip install dbt-core dbt-snowflake`
 - Snowflake database: database created for this assignment. Connection ddetails in [presenation] (3_Design/Presentation.pptx) or [profile file](3_Design/profiles.yml). Its not good practice to share file with password in it, but sharing as this assignment project :)
 - Note:
-    - You can run these commands in Apple Mac Terminal or Unix or Linux or WSL (Windows Subsytem Linux). Please be aware that the installation procedure is slighty different in other OS
+    - You can run these commands in Apple Mac Terminal or Unix or Linux or WSL (Windows Subsytem Linux)
+    - Please be aware that the installation procedure is slighty different in other OS
     - If you are running this dbt-project with Apple silicon i.e., Macbook M1 or higher, Run the terminal using Rosetta [More info here](https://support.apple.com/en-us/102527)
 
 
@@ -17,13 +18,13 @@ Welcome !
 - [Presentation](3_Design/Presentation.pptx) contains details about this project Design, Enviroment setup, dbt & Snowflake setup, Snowflake connection and implementation details etc 
 
 ## Design:
-- [Solution design](3_Design/Solution.drawio)
-- [Data Model design](<3_Design/Data model - DWH.drawio>)
+- ![Solution design](<3_Design/Solution Design.jpg>)
+- [Data Model design](<3_Design/Data model - DWH.jpg>)
 - Designed with 3 layer approach i.e., RAW, stage and Data vault layers
 - Note: 
     - There are no DWH(Datawarehouse) and consumption related requirements. Hence these 2 layers are skipped for this assignment (Out of scope :))
     - To support downstream on breaking changes (table field like name, data type), used version at the end of each model/table/view name like _v0 or _v1
-    - Above design documents can be viewed or opened using https://app.diagrams.net/ or App Diagram application from your laptop
+    - Kept original .drawio file version of design the documents also and it can be viewed or opened using https://app.diagrams.net/ or App Diagram application from your laptop
 
 ## Development:
 
@@ -71,8 +72,8 @@ Model the data using DataVault 2.0 model
     - Built orders link table to link Orders satellite table with Customer hub and Product hub tables
 
 - Automation:
-    - DataVault can be automated using DV_Automate, if the underlying data is prepared good and there are no transformation
-    - Built model ([sat_orders_v1](4_dbt_project/models/datavault/sat/sat_orders_v1.sql)) model to showcase the DV_Automate feature
+    - Data Vault layer can be automated using Automate DV (formaly know abt dbt vault), if the underlying data is direct without any techincal transformation or prepared good in Stage layer
+    - Built model ([sat_orders_v1](4_dbt_project/models/datavault/sat/sat_orders_v1.sql)) model to showcase the Automate_DV features
     - More info about [Automate DV](https://automate-dv.readthedocs.io/en/latest/)
 
 
