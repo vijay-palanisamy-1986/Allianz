@@ -19,7 +19,7 @@ Welcome !
 
 ## Design:
 - ![Solution design](<3_Design/Solution Design.jpg>)
-- [Data Model design](<3_Design/Data model - DWH.jpg>)
+- ![Data Model design](<3_Design/Data model - DWH.jpg>)
 - Designed with 3 layer approach i.e., RAW, stage and Data vault layers
 - Note: 
     - There are no DWH(Datawarehouse) and consumption related requirements. Hence these 2 layers are skipped for this assignment (Out of scope :))
