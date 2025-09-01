@@ -1,17 +1,20 @@
 Welcome !
 
-## Pre-requistis 
-- python3 installation
-- dbt-core installation
-- dbt-snowflake connector: python3 -m pip install dbt-core dbt-snowflake
-- Snowflake database: database created for this assignment connection details in [profile file](3_Design/profiles.yml)
-- Note: If you are running this dbt-project with Apple silicon i.e., Macbook M1 or higher, Run the terminal using Rosetta [More info here](https://support.apple.com/en-us/102527)
+## Pre-requistis
+- Install python 3 or higher: `brew install python`
+- Install dbt-core: `python3 -m pip install dbt-core`
+- Update all dependent dbt package: `dbt deps`
+- Install dbt-snowflake database connector: `python3 -m pip install dbt-core dbt-snowflake`
+- Snowflake database: database created for this assignment. Connection ddetails in [presenation] (3_Design/Presentation.pptx) or [profile file](3_Design/profiles.yml). Its not good practice to share file with password in it, but sharing as this assignment project :)
+- Note:
+    - You can run these commands in Apple Mac Terminal or Unix or Linux or WSL (Windows Subsytem Linux). Please be aware that the installation procedure is slighty different in other OS
+    - If you are running this dbt-project with Apple silicon i.e., Macbook M1 or higher, Run the terminal using Rosetta [More info here](https://support.apple.com/en-us/102527)
 
 
 ## About this project:
 - This is dbt assignment created for Alliaze Interview evaluation purpose.
 - Requirement of this assignment provided by Allianze is in [Allianz_DBT_Assignmnet_medior.doc](1_Requirements/Allianz_DBT_Assignmnet_medior.docx) 
-- [Presentation](3_Design/Presentation.pptx) contains details about this project Design, Enviroment setup, dbt & Snowflake setup and implementation details etc 
+- [Presentation](3_Design/Presentation.pptx) contains details about this project Design, Enviroment setup, dbt & Snowflake setup, Snowflake connection and implementation details etc 
 
 ## Design:
 - [Solution design](3_Design/Solution.drawio)
@@ -66,6 +69,12 @@ Model the data using DataVault 2.0 model
 
 - Link
     - Built orders link table to link Orders satellite table with Customer hub and Product hub tables
+
+- Automation:
+    - DataVault can be automated using DV_Automate, if the underlying data is prepared good and there are no transformation
+    - Built model ([sat_orders_v1](4_dbt_project/models/datavault/sat/sat_orders_v1.sql)) model to showcase the DV_Automate feature
+    - More info about [Automate DV](https://automate-dv.readthedocs.io/en/latest/)
+
 
 ### Validation: 
 2 type of validation are done: Technical & Business validaitons
