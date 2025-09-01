@@ -16,16 +16,16 @@ Welcome !
 ## Design:
 - [Solution design](3_Design/Solution.drawio)
 - [Data Model design](<3_Design/Data model - DWH.drawio>)
+- Designed with 3 layer approach i.e., RAW, stage and Data vault layers
 - Note: 
-    - There no Dataware house and consumption related requirment. Hence these 2 layers are skipped (Out of scope :))
-    - Above design document can be viewed or opened using https://app.diagrams.net/ or App Diagram applicaiton from your laptop
-
+    - There are no DWH(Datawarehouse) and consumption related requirements. Hence these 2 layers are skipped for this assignment (Out of scope :))
+    - To support downstream on breaking changes (table field like name, data type), used version at the end of each model/table/view name like _v0 or _v1
+    - Above design documents can be viewed or opened using https://app.diagrams.net/ or App Diagram application from your laptop
 
 ## Development:
-Developed using 3 layer approach i.e., RAW, stage and Data vault layers
 
 ### RAW Layer
-- This RAW layer holds the exact data that is coming from source either in files or in tables
+- The RAW layer holds the exact data that is coming from source either in files or in tables
 - Loading Mechanism: Trucate and Load, means will have only last version of the data received
 - Datasets:
     - All RAW data is downloaded from www.kaggle.com
@@ -101,3 +101,12 @@ All the dbt model in this project can be excuted in different ways....
     - Example 1: `dbt run --select modelName+`
     - Example 2: `dbt run --select +modelName`
     - Example 3: `dbt run --select +modelName+`
+
+
+For any questions or details please call me...
+Vijay
++31687784922
+vijay.palanisamy@kongu-infotech.com
+
+
+Thank you!
